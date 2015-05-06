@@ -1,0 +1,41 @@
+body
+{
+
+	border: 1px solid tomato;
+	margin:0 auto;/* margin auto es para mover cajas*/
+	max-width: 1024px;
+}
+
+header h1
+{
+	margin: 0px 0px 0px 25px;
+}
+header nav
+{
+	display: none;
+	text-align: center;
+}
+
+header nav ul li
+{
+	display: inline-block;
+	margin: 0px 10px 0px 0px;
+	/*width: 155px;*/
+}
+/* el ancho normal de una pantalla es de 1024px*/
+
+.mi-caja-entrada/*toDAS LAS CLASES EMPIEZAN CON . */
+{
+	margin:0 auto; /*centrado horizontal*/
+	text-align: center;/*centrado texto*/
+	width: 300px;/*Ancho de la caja*/
+}
+header img
+{
+	float:right;/*para mover fotos, atributos que me permite moverlo a la iz,derecha
+	independientemente de la caja*/
+	
+	margin-top: -35px;/*subir la foto*/
+	margin-right: 100px;
+	width:90px;
+}

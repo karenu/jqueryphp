@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!--un panel es un titulo con contenido-->
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Uso de un framework de CSS3</title>
+	 <!--Latest compiled and minified CSS -->
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/estilosusobootstrap.css"> <!--primero poner los links que NO son de nosotros-->
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="js/eventos.js"></script>
+</head>
+<body><!--etiqueta que contieene todo nuestro código html-->
+	<header>
+		<img src="img/logotec.jpeg" alt="">
+		<div class="page-header">
+  <h1>Karen :) <small>Instituto Tecnológico de Culiacán</small></h1>
+</div>
+	
+	<nav>
+		<ul>
+		
+			<li>
+		<button class="btn btn-success"> <!-- btn es una clase, y success es subclase-->
+		Buscar <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+		</button>
+			</li>
+	<li>
+		<button class="btn btn-primary"> <!-- btn es una clase, y success es subclase-->
+		Dinero <span class="glyphicon glyphicon-usd" aria-hidden="true"></span>
+	</button>
+	</li>
+	<li>
+		<button class="btn btn-danger"> <!-- btn es una clase, y success es subclase-->
+		Encontrar el amor  <span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span>
+	</button>
+	</li>
+	<li>
+		<button class="btn btn-warning"> <!-- btn es una clase, y success es subclase-->
+		Fotograía <span class="glyphicon glyphicon-camera" aria-hidden="true"> </span>
+	</button>
+	</li>
+	<li>
+		<button class="btn btn-default"> <!-- btn es una clase, y success es subclase-->
+		Obsequiar  <span class="glyphicon glyphicon-gift" aria-hidden="true"></span><!--Lo saco de la pag de bootstrap-->
+	</button>
+	</li>
+</ul>
+	</nav>
+
+	</header>
+			<section>
+				<article id="cajaUsuario">
+				<div class="panel panel-primary mi-caja-entrada"> <!-- Lo saque de panel en bootstrap-->
+  					<div class="panel-heading">
+   					 <h3 class="panel-title">Datos generales</h3>
+  					</div>
+  					<div class="panel-body">
+    				<input type="text" class="form-control" placeholder="Nombre de usuario" autofocus id="txtUsuario"> <!--form control para que se haga del ancho de la pantalla, y placeholder para que el text estè dentro del input-->
+    				<input type="password" class="form-control" placeholder="Contraseña" id="txtClave">
+    				<button class="btn btn-info btn-lg btn-block">Enviar</button> <!--btn-lg  btn-block para que se haga a lo ancho de la ventana el botón-->
+  					</div>
+				</div>
+</article>
+</section>
+</body>
+</html>
