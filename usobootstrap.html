@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Uso de un framework de CSS3</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/estilosusobootstrap.css">
+	<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script src="js/eventos.js"></script>
+</head>
+<body>
+	<header>
+		<div class="page-header">
+		  <h1>Título del Sistema <br>
+		  	<small>Instituto Tecnológico de Culiacán</small>
+		  </h1>
+		</div>	
+		<nav>
+			<ul>
+				<li>
+					<button class="btn btn-default">
+						<span class="glyphicon glyphicon-home" ></span>  Inicio
+					</button>
+				</li>
+				<li>
+					<button class="btn btn-success">
+						<span class="glyphicon glyphicon-plus" ></span>  Altas
+					</button>
+				</li>
+				<li>
+					<button class="btn btn-danger">
+						<span class="glyphicon glyphicon-minus" ></span>  Bajas
+					</button>
+				</li>
+				<li>
+					<button class="btn btn-warning">
+						<span class="glyphicon glyphicon-thumbs-up" ></span>  Cambios
+					</button>
+				</li>
+				<li>
+					<button class="btn btn-primary">
+						<span class="glyphicon glyphicon-search" ></span>  Consultas
+					</button>
+				</li>
+			</ul>			
+		</nav>
+		<img src="img/logoITC.jpg" alt="">
+	</header>
+	<section>
+		<article id="cajaUsuario">
+			<div class="panel panel-primary mi-caja-entrada">
+			  <div class="panel-heading">
+			    <h3 class="panel-title">Datos Generales</h3>
+			  </div>
+			  <div class="panel-body">
+			    <input type="text" class="form-control" placeholder="Nombre de Usuario" autofocus id="txtUsuario">
+			    <input type="password" class="form-control" placeholder="Contraseña" id="txtClave">
+			  	<button class="btn btn-success btn-lg btn-block" id="btnValidaUsuario">Enviar</button>
+			  </div>
+			</div>
+		</article>
+	</section>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

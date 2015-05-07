@@ -1,0 +1,57 @@
+body
+{
+	border: 1px solid red;
+	margin: 0 auto;
+	max-width: 1024px;
+}
+
+header h1
+{
+	margin: 0px 0px 0px 15px;
+}
+
+header img
+{
+	float: right;
+	margin: -170px 15px 0px 0px;
+	width: 100px;
+}
+
+header nav
+{
+	display: none;
+	text-align: center;
+}
+
+header nav ul li
+{
+	display: inline-block;
+	margin: 0px 10px 0px 0px;
+	/*width: 89px;*/
+}
+
+/*Empiezan las clases personalizadas*/
+.mi-caja-entrada
+{
+	margin: 0 auto;     /*Centrado horizontal*/
+	text-align: center; /*Centrado del texto*/
+	width: 350px;       /*Ancho de la caja*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
