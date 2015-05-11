@@ -23,7 +23,7 @@
 					</button>
 				</li>
 				<li>
-					<button class="btn btn-success">
+					<button id="btnAltas"class="btn btn-success">
 						<span class="glyphicon glyphicon-plus" ></span>  Altas
 					</button>
 				</li>
@@ -59,10 +59,21 @@
 			  </div>
 			</div>
 		</article>
+		<article id="artUsuarios">
+			<h2>Catálogo de Usuarios</h2>
+			<input type="text" id="txtNomUsuario" placeholder="Nombre del Usuario" class="form-control" autofocus>
+
+			<input type="text" id="txtNombreUsuario" placeholder="Nombre completo del usuario" class="form-control">
+
+			<input type="text" id="txtTipoUsuario" placeholder="Tipo de usuario (0=Invitado, 1=Administrador)" class="form-control">
+
+			<button class="btn btn-lg btn-block btn-success" id="btnGuardarUsuarios">
+				Guardar
+			</button>
+		</article>
 	</section>
 </body>
 </html>
-
 
 
 

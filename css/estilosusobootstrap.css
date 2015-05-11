@@ -31,22 +31,20 @@ header nav ul li
 }
 
 /*Empiezan las clases personalizadas*/
+
+#artUsuarios
+{
+	display: none;
+	margin: 0 auto;
+	width: 350px;	
+}
+
 .mi-caja-entrada
 {
 	margin: 0 auto;     /*Centrado horizontal*/
 	text-align: center; /*Centrado del texto*/
 	width: 350px;       /*Ancho de la caja*/
 }
-
-
-
-
-
-
-
-
-
-
 
 
 
