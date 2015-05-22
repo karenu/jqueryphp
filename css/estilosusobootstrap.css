@@ -38,6 +38,12 @@ header nav ul li
 	margin: 0 auto;
 	width: 350px;	
 }
+#artConsultas
+{
+	display: none;
+	margin: 0 auto;
+	width: 550px;
+}
 
 .mi-caja-entrada
 {

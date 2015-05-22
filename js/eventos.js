@@ -45,6 +45,25 @@ var inicioApp = function()
 	{
 		$("#artUsuarios").show("slow");
 		$("#txtNomUsuario").focus();
+		$("#btnGuardarUsuarios").show();
+		$("#btnEliminarUsuarios").hide();
+		$("#btnCambiarUsuarios").hide();
+	}
+	var Bajas = function()
+	{
+		$("#artUsuarios").show("slow");
+		$("#txtNomUsuario").focus();
+		$("#btnGuardarUsuarios").hide();
+		$("#btnEliminarUsuarios").show();
+		$("#btnCambiarUsuarios").hide();
+	}
+	var Cambiar = function()
+	{
+		$("#artUsuarios").show("slow");
+		$("#btnEliminarUsuarios").hide();
+		$("#btnGuardarUsuarios").hide();	
+		$("#btnCambiarUsuarios").show();				
+		$("#txtNomUsuario").focus();
 	}
 
 	var teclaNomUsuario = function(tecla)
@@ -118,12 +137,106 @@ var inicioApp = function()
 							})
 		}
 	}
+	var EliminarUsuarios = function()
+	{
+		var usuario = $("#txtNomUsuario").val();
+		if(usuario!="")
+		{
+			var parametros = "opcion=eliminarusuarios"+
+							 "&usuario="+usuario+
+							 "&id="+Math.random();
+			$.ajax({
+				cache: false,
+				type: "POST",
+				dataType: "json",
+				data: parametros,
+				url: "datos/eliminarusuarios.php",
+				success: function(response){
+					if(response.respuesta == true)
+					{
+						alert("Se ha eliminado el usuario");
+						$("#artUsuarios > input").val("");
+						$("#txtNomUsuario").focus();
+					}
+				},
+				error: function(xhr,ajaxOption,throws){
+					console.log("Ha ocurrido un error");
+				}
+			});
+		}	
+	}
+	var CambiarUsuarios = function()
+	{
+		var usuario = $("#txtNomUsuario").val();
+		var nombre  = $("#txtNombreUsuario").val();		
+		var tipo    = $("#txtTipoUsuario").val();	
+		if(usuario!="" && nombre!="" && tipo!="")
+		{
+			var parametros = "opcion=cambiarusuarios"+
+							 "&usuario="+usuario+
+							 "&nombre="+nombre+
+							 "&tipousuario="+tipo+
+							 "&id="+Math.random();
+			$.ajax({
+				cache: false,
+				type: "POST",
+				dataType: "json",
+				data: parametros,
+				url: "datos/cambiarusuarios.php",
+				success: function(response){
+					if(response.respuesta == true)
+					{
+						alert("Se ha cambiado la información del usuario");
+						$("#artUsuarios > input").val("");
+						$("#txtNomUsuario").focus();
+					}
+				},
+				error: function(xhr,ajaxOption,throws){
+					console.log("Ha ocurrido un error");
+				}
+			});
+		}	
+	}
+	var Consultas =function()
+	{
+		$("section > article").hide("slow");
+		$("#artConsultas").show("slow");
+		var parametros="opcion=consultas"+
+						"&id="+Math.random();
+						$.ajax({
+							cache: false,
+							type: "POST",
+							dataType:"json",
+							data: parametros,
+							url: "datos/consultas.php",
+							success: function(response){
+
+								if(response.respuesta==true)
+								{
+
+									$("#tablaConsultas").html(response.renglones);
+								}
+							},
+							error: function(xhr,ajaxOptionx,throws){
+
+								console.log("Ha ocurrido un error");
+							}
+
+
+
+						});
+	}
 
 	$("#btnValidaUsuario").on("click",validausuario);
 	$("#txtClave").on("keypress",teclaClave);
 	$("#btnAltas").on("click",Altas);
 	$("#txtNomUsuario").on("keypress",teclaNomUsuario);	
 	$("#btnGuardarUsuarios").on("click",GuardarUsuarios);
+	$("#btnBajas").on("click",Bajas);
+	$("#btnEliminarUsuarios").on("click",EliminarUsuarios);
+	$("#btnCambiar").on("click",Cambiar);
+	$("#btnCambiarUsuarios").on("click",CambiarUsuarios);
+	$("#btnConsultas").on("click",Consultas);
 
 }
 $(document).on("ready",inicioApp);
