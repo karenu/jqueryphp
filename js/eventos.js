@@ -48,6 +48,7 @@ var inicioApp = function()
 		$("#btnGuardarUsuarios").show();
 		$("#btnEliminarUsuarios").hide();
 		$("#btnCambiarUsuarios").hide();
+		$("#artConsultas").hide();
 	}
 	var Bajas = function()
 	{
@@ -56,6 +57,7 @@ var inicioApp = function()
 		$("#btnGuardarUsuarios").hide();
 		$("#btnEliminarUsuarios").show();
 		$("#btnCambiarUsuarios").hide();
+		$("#artConsultas").hide();
 	}
 	var Cambiar = function()
 	{
@@ -64,6 +66,7 @@ var inicioApp = function()
 		$("#btnGuardarUsuarios").hide();	
 		$("#btnCambiarUsuarios").show();				
 		$("#txtNomUsuario").focus();
+		$("#artConsultas").hide();
 	}
 
 	var teclaNomUsuario = function(tecla)

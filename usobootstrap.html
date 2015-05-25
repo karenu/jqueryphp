@@ -64,8 +64,12 @@
 			<input type="text" id="txtNomUsuario" placeholder="Nombre del Usuario" class="form-control" autofocus>
 
 			<input type="text" id="txtNombreUsuario" placeholder="Nombre completo del usuario" class="form-control">
-
-			<input type="text" id="txtTipoUsuario" placeholder="Tipo de usuario (0=Invitado, 1=Administrador)" class="form-control">
+			<select name="txtTipoUsuario" id="txtTipoUsuario" class="form-control">
+				<option value="0">Invitado</option><!--Estamos limitando al usuario a solo dos opciones-->
+				<option value="1">Administrador</option>
+				
+			</select>
+			<!--<input type="text" id="txtTipoUsuario" placeholder="Tipo de usuario (0=Invitado, 1=Administrador)" class="form-control">-->
 
 			<button class="btn btn-lg btn-block btn-success" id="btnGuardarUsuarios">
 				Guardar
