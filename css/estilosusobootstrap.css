@@ -44,6 +44,12 @@ header nav ul li
 	margin: 0 auto;
 	width: 550px;
 }
+#cajaContra
+{
+	display: none;
+	margin: 0 auto;
+	width: 550px;
+}
 
 .mi-caja-entrada
 {

@@ -49,6 +49,7 @@ var inicioApp = function()
 		$("#btnEliminarUsuarios").hide();
 		$("#btnCambiarUsuarios").hide();
 		$("#artConsultas").hide();
+		
 	}
 	var Bajas = function()
 	{
@@ -58,6 +59,7 @@ var inicioApp = function()
 		$("#btnEliminarUsuarios").show();
 		$("#btnCambiarUsuarios").hide();
 		$("#artConsultas").hide();
+		
 	}
 	var Cambiar = function()
 	{
@@ -67,6 +69,8 @@ var inicioApp = function()
 		$("#btnCambiarUsuarios").show();				
 		$("#txtNomUsuario").focus();
 		$("#artConsultas").hide();
+		
+
 	}
 
 	var teclaNomUsuario = function(tecla)
@@ -229,7 +233,19 @@ var inicioApp = function()
 
 						});
 	}
+	var CambiarContra=function()
+	{
+		$("#cajaContra").show();
+	}
 
+//Eventos del usuario.
+
+var TablaEliminar=function()
+{
+	var usuario = $(this).val(); /* obtengo el valor del usuario que contiene el botón que le piqué*/
+		$("#txtNomUsuario").val(usuario); /* le mandamos el val de nom usuario que obtuvo al picarle el boton*/
+		EliminarUsuarios();
+}
 	$("#btnValidaUsuario").on("click",validausuario);
 	$("#txtClave").on("keypress",teclaClave);
 	$("#btnAltas").on("click",Altas);
@@ -240,6 +256,12 @@ var inicioApp = function()
 	$("#btnCambiar").on("click",Cambiar);
 	$("#btnCambiarUsuarios").on("click",CambiarUsuarios);
 	$("#btnConsultas").on("click",Consultas);
+	$("#tablaConsultas").on("click", ".btnTablaEliminar",TablaEliminar); /* la funcion TablaEliminar todavia no existe, pero la vamos a crear*/
+	/*$(elemento).on(evento,funciòn); Para código fijo
+	$(ElementoContenedor).on(evento,elementoVariable, Funciòn); creado en tiempo de ejecuciòn
+								el boton que segun no existe 
+	*/
+	$("#btnCambiarContra").on("click",CambiarContra);
 
 }
 $(document).on("ready",inicioApp);
